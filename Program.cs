@@ -54,7 +54,7 @@ namespace didwwapi
 
 		private static string GenerateAuthString()
 		{
-			string value = string.Concat (API_USERNAME, API_KEY);
+			string value = string.Concat (API_USERNAME, API_KEY, "sandbox");
 
 			var data = Encoding.ASCII.GetBytes(value);
 			var hashData = new SHA1Managed().ComputeHash(data);

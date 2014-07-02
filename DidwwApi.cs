@@ -71,7 +71,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
     private System.Threading.SendOrPostCallback didww_getcoverageOperationCompleted;
     
     public DIDWW() {
-        this.Url = "http://api.didww.com/api2/index.php";
+        this.Url = "https://sandbox-api.didww.com/api2/index.php";
     }
     
     public event didww_getdidwwapidetailsCompletedEventHandler didww_getdidwwapidetailsCompleted;
@@ -124,7 +124,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
     
     public event didww_getcoverageCompletedEventHandler didww_getcoverageCompleted;
     
-    [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://api.didww.com/api2/index.php/didww_getdidwwapidetails", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
+    [System.Web.Services.Protocols.SoapRpcMethodAttribute("https://sandbox-api.didww.com/api2/index.php/didww_getdidwwapidetails", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
     [return: System.Xml.Serialization.SoapElement("return")]
     public api_didwwdata didww_getdidwwapidetails(string auth_string) {
         object[] results = this.Invoke("didww_getdidwwapidetails", new object[] {
@@ -161,7 +161,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
         }
     }
     
-    [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://api.didww.com/api2/index.php/didww_getdidwwregions", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
+    [System.Web.Services.Protocols.SoapRpcMethodAttribute("https://sandbox-api.didww.com/api2/index.php/didww_getdidwwregions", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
     [return: System.Xml.Serialization.SoapElement("return")]
     public Regions[] didww_getdidwwregions(string auth_string, string country_iso, string city_prefix, string last_request_gmt, string city_id) {
         object[] results = this.Invoke("didww_getdidwwregions", new object[] {
@@ -210,7 +210,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
         }
     }
     
-    [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://api.didww.com/api2/index.php/didww_getdidwwcountries", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
+    [System.Web.Services.Protocols.SoapRpcMethodAttribute("https://sandbox-api.didww.com/api2/index.php/didww_getdidwwcountries", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
     [return: System.Xml.Serialization.SoapElement("return")]
     public Country[] didww_getdidwwcountries(string auth_string, string country_iso) {
         object[] results = this.Invoke("didww_getdidwwcountries", new object[] {
@@ -250,7 +250,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
         }
     }
     
-    [System.Web.Services.Protocols.SoapRpcMethodAttribute("urn:didww/didww_getdidwwcities", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
+    [System.Web.Services.Protocols.SoapRpcMethodAttribute("https://sandbox-api.didww.com/api2/index.php/didww_getdidwwcities", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
     [return: System.Xml.Serialization.SoapElement("return")]
     public City[] didww_getdidwwcities(string auth_string, string country_iso, string city_id, int active) {
         object[] results = this.Invoke("didww_getdidwwcities", new object[] {
@@ -296,7 +296,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
         }
     }
     
-    [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://api.didww.com/api2/index.php/didww_getdidwwpstnrates", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
+    [System.Web.Services.Protocols.SoapRpcMethodAttribute("https://sandbox-api.didww.com/api2/index.php/didww_getdidwwpstnrates", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
     [return: System.Xml.Serialization.SoapElement("return")]
     public Rates[] didww_getdidwwpstnrates(string auth_string, string country_iso, string pstn_prefix, string last_request_gmt) {
         object[] results = this.Invoke("didww_getdidwwpstnrates", new object[] {
@@ -342,7 +342,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
         }
     }
     
-    [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://api.didww.com/api2/index.php/didww_updatepstnrates", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
+    [System.Web.Services.Protocols.SoapRpcMethodAttribute("https://sandbox-api.didww.com/api2/index.php/didww_updatepstnrates", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
     [return: System.Xml.Serialization.SoapElement("return")]
     public GlobalResponse didww_updatepstnrates(string auth_string, RatesIn[] rates) {
         object[] results = this.Invoke("didww_updatepstnrates", new object[] {
@@ -382,7 +382,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
         }
     }
     
-    [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://api.didww.com/api2/index.php/didww_checkpstnnumber", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
+    [System.Web.Services.Protocols.SoapRpcMethodAttribute("https://sandbox-api.didww.com/api2/index.php/didww_checkpstnnumber", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
     [return: System.Xml.Serialization.SoapElement("return")]
     public GlobalResponse didww_checkpstnnumber(string auth_string, string pstn_number) {
         object[] results = this.Invoke("didww_checkpstnnumber", new object[] {
@@ -422,7 +422,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
         }
     }
     
-    [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://api.didww.com/api2/index.php/didww_ordercreate", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
+    [System.Web.Services.Protocols.SoapRpcMethodAttribute("https://sandbox-api.didww.com/api2/index.php/didww_ordercreate", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
     [return: System.Xml.Serialization.SoapElement("return")]
     public service_data didww_ordercreate(string auth_string, string customer_id, string country_iso, string city_prefix, int period, MappingDataIn map_data, string prepaid_funds, string uniq_hash, string city_id, int autorenew_enable) {
         object[] results = this.Invoke("didww_ordercreate", new object[] {
@@ -486,7 +486,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
         }
     }
     
-    [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://api.didww.com/api2/index.php/didww_orderautorenew", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
+    [System.Web.Services.Protocols.SoapRpcMethodAttribute("https://sandbox-api.didww.com/api2/index.php/didww_orderautorenew", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
     [return: System.Xml.Serialization.SoapElement("return")]
     public service_data didww_orderautorenew(string auth_string, string customer_id, string did_number, int period, string uniq_hash) {
         object[] results = this.Invoke("didww_orderautorenew", new object[] {
@@ -535,7 +535,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
         }
     }
     
-    [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://api.didww.com/api2/index.php/didww_didrestore", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
+    [System.Web.Services.Protocols.SoapRpcMethodAttribute("https://sandbox-api.didww.com/api2/index.php/didww_didrestore", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
     [return: System.Xml.Serialization.SoapElement("return")]
     public GlobalResponse didww_didrestore(string auth_string, string customer_id, string did_number, int period, string uniq_hash, int isrenew) {
         object[] results = this.Invoke("didww_didrestore", new object[] {
@@ -587,7 +587,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
         }
     }
     
-    [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://api.didww.com/api2/index.php/didww_ordercancel", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
+    [System.Web.Services.Protocols.SoapRpcMethodAttribute("https://sandbox-api.didww.com/api2/index.php/didww_ordercancel", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
     [return: System.Xml.Serialization.SoapElement("return")]
     public GlobalResponse didww_ordercancel(string auth_string, string customer_id, string did_number) {
         object[] results = this.Invoke("didww_ordercancel", new object[] {
@@ -630,7 +630,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
         }
     }
     
-    [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://api.didww.com/api2/index.php/didww_updatemapping", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
+    [System.Web.Services.Protocols.SoapRpcMethodAttribute("https://sandbox-api.didww.com/api2/index.php/didww_updatemapping", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
     [return: System.Xml.Serialization.SoapElement("return")]
     public GlobalResponse didww_updatemapping(string auth_string, string customer_id, string did_number, MappingDataIn map_data) {
         object[] results = this.Invoke("didww_updatemapping", new object[] {
@@ -676,7 +676,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
         }
     }
     
-    [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://api.didww.com/api2/index.php/didww_updateprepaidbalance", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
+    [System.Web.Services.Protocols.SoapRpcMethodAttribute("https://sandbox-api.didww.com/api2/index.php/didww_updateprepaidbalance", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
     [return: System.Xml.Serialization.SoapElement("return")]
     public prepaid_data didww_updateprepaidbalance(string auth_string, string customer_id, string prepaid_funds, int operation_type, string uniq_hash) {
         object[] results = this.Invoke("didww_updateprepaidbalance", new object[] {
@@ -725,7 +725,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
         }
     }
     
-    [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://api.didww.com/api2/index.php/didww_getprepaidbalance", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
+    [System.Web.Services.Protocols.SoapRpcMethodAttribute("https://sandbox-api.didww.com/api2/index.php/didww_getprepaidbalance", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
     [return: System.Xml.Serialization.SoapElement("return")]
     public prepaid_data didww_getprepaidbalance(string auth_string, string customer_id) {
         object[] results = this.Invoke("didww_getprepaidbalance", new object[] {
@@ -765,7 +765,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
         }
     }
     
-    [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://api.didww.com/api2/index.php/didww_getprepaidbalancelist", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
+    [System.Web.Services.Protocols.SoapRpcMethodAttribute("https://sandbox-api.didww.com/api2/index.php/didww_getprepaidbalancelist", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
     [return: System.Xml.Serialization.SoapElement("return")]
     public prepaid_data[] didww_getprepaidbalancelist(string auth_string, string customer_id) {
         object[] results = this.Invoke("didww_getprepaidbalancelist", new object[] {
@@ -805,7 +805,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
         }
     }
     
-    [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://api.didww.com/api2/index.php/didww_getservicedetails", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
+    [System.Web.Services.Protocols.SoapRpcMethodAttribute("https://sandbox-api.didww.com/api2/index.php/didww_getservicedetails", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
     [return: System.Xml.Serialization.SoapElement("return")]
     public service_data didww_getservicedetails(string auth_string, string customer_id, string api_order_id, string did_number) {
         object[] results = this.Invoke("didww_getservicedetails", new object[] {
@@ -851,7 +851,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
         }
     }
     
-    [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://api.didww.com/api2/index.php/didww_getservicelist", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
+    [System.Web.Services.Protocols.SoapRpcMethodAttribute("https://sandbox-api.didww.com/api2/index.php/didww_getservicelist", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
     [return: System.Xml.Serialization.SoapElement("return")]
     public service_data[] didww_getservicelist(string auth_string, string customer_id) {
         object[] results = this.Invoke("didww_getservicelist", new object[] {
@@ -891,7 +891,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
         }
     }
     
-    [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://api.didww.com/api2/index.php/didww_callhistory_invoices", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
+    [System.Web.Services.Protocols.SoapRpcMethodAttribute("https://sandbox-api.didww.com/api2/index.php/didww_callhistory_invoices", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
     [return: System.Xml.Serialization.SoapElement("return")]
     public used_amount_data didww_callhistory_invoices(string auth_string, int customer_id, string from_date, string to_date) {
         object[] results = this.Invoke("didww_callhistory_invoices", new object[] {
@@ -937,7 +937,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
         }
     }
     
-    [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://api.didww.com/api2/index.php/didww_getsmslog", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
+    [System.Web.Services.Protocols.SoapRpcMethodAttribute("https://sandbox-api.didww.com/api2/index.php/didww_getsmslog", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
     [return: System.Xml.Serialization.SoapElement("return")]
     public SMSPage didww_getsmslog(string auth_string, int customer_id, string from_date, string to_date, string destination, string source, int success, int limit, int offset, string order, string order_Dir) {
         object[] results = this.Invoke("didww_getsmslog", new object[] {
@@ -1004,7 +1004,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
         }
     }
     
-    [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://api.didww.com/api2/index.php/didww_order_autorenew_status", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
+    [System.Web.Services.Protocols.SoapRpcMethodAttribute("https://sandbox-api.didww.com/api2/index.php/didww_order_autorenew_status", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
     [return: System.Xml.Serialization.SoapElement("return")]
     public GlobalResponse didww_order_autorenew_status(string auth_string, string customer_id, string did_number, int status) {
         object[] results = this.Invoke("didww_order_autorenew_status", new object[] {
@@ -1050,7 +1050,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
         }
     }
     
-    [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://api.didww.com/api2/index.php/didww_pstn_traffic", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
+    [System.Web.Services.Protocols.SoapRpcMethodAttribute("https://sandbox-api.didww.com/api2/index.php/didww_pstn_traffic", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
     [return: System.Xml.Serialization.SoapElement("return")]
     public traffic_item[] didww_pstn_traffic(string auth_string, string from_date, string to_date) {
         object[] results = this.Invoke("didww_pstn_traffic", new object[] {
@@ -1093,7 +1093,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
         }
     }
     
-    [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://api.didww.com/api2/index.php/didww_getcdrlog", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
+    [System.Web.Services.Protocols.SoapRpcMethodAttribute("https://sandbox-api.didww.com/api2/index.php/didww_getcdrlog", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
     [return: System.Xml.Serialization.SoapElement("return")]
     public CDRPage didww_getcdrlog(string auth_string, string customer_id, string did_number, string from_date, string to_date, string limit, string offset, string order, string order_Dir) {
         object[] results = this.Invoke("didww_getcdrlog", new object[] {
@@ -1154,7 +1154,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
         }
     }
     
-    [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://api.didww.com/api2/index.php/didww_update_toll_free_data", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
+    [System.Web.Services.Protocols.SoapRpcMethodAttribute("https://sandbox-api.didww.com/api2/index.php/didww_update_toll_free_data", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
     [return: System.Xml.Serialization.SoapElement("return")]
     public GlobalResponse didww_update_toll_free_data(string auth_string, TollFreeRatesIn[] rates) {
         object[] results = this.Invoke("didww_update_toll_free_data", new object[] {
@@ -1194,7 +1194,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
         }
     }
     
-    [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://api.didww.com/api2/index.php/didww_get_toll_free_data", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
+    [System.Web.Services.Protocols.SoapRpcMethodAttribute("https://sandbox-api.didww.com/api2/index.php/didww_get_toll_free_data", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
     [return: System.Xml.Serialization.SoapElement("return")]
     public TollFreeRates[] didww_get_toll_free_data(string auth_string) {
         object[] results = this.Invoke("didww_get_toll_free_data", new object[] {
@@ -1231,7 +1231,7 @@ public partial class DIDWW : System.Web.Services.Protocols.SoapHttpClientProtoco
         }
     }
     
-    [System.Web.Services.Protocols.SoapRpcMethodAttribute("http://api.didww.com/api2/index.php/didww_getcoverage", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
+    [System.Web.Services.Protocols.SoapRpcMethodAttribute("https://sandbox-api.didww.com/api2/index.php/didww_getcoverage", RequestNamespace="urn:didww", ResponseNamespace="urn:didww")]
     [return: System.Xml.Serialization.SoapElement("return")]
     public RegionsExt[] didww_getcoverage(string auth_string, string country_iso, string city_prefix, int city_id) {
         object[] results = this.Invoke("didww_getcoverage", new object[] {
